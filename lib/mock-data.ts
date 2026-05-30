@@ -1,0 +1,166 @@
+import type { PortfolioData, ServerStatus } from "./types"
+
+export const mockServerStatus: ServerStatus = {
+  active: true,
+  uptime_seconds: 3_672_000,
+  os_name: "Ubuntu 22.04 LTS",
+  cpu_usage: 23,
+  ram_total_gb: 16,
+  ram_used_gb: 8.4,
+  disk_total_gb: 500,
+  disk_used_gb: 124.6,
+}
+
+export const mockData: PortfolioData = {
+  about: {
+    name: "Supakorn M.",
+    titles: ["Full Stack Developer", "UI/UX Enthusiast", "Problem Solver"],
+    bio: "Passionate developer with a love for building clean, performant web applications. I enjoy turning complex problems into elegant solutions with modern technologies.",
+    photo_url: "https://i.pravatar.cc/400?img=11",
+  },
+
+  projects: [
+    {
+      id: 1,
+      title: "E-Commerce Platform",
+      description: "A full-stack e-commerce solution with real-time inventory management, payment integration, and an admin dashboard.",
+      tech_stack: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
+      url: "https://github.com",
+      image_url: "https://picsum.photos/seed/ecom/600/340",
+      position: 1,
+    },
+    {
+      id: 2,
+      title: "Task Management App",
+      description: "Collaborative task manager with real-time updates, drag-and-drop boards, and team workspaces.",
+      tech_stack: ["React", "Express", "Socket.io", "MongoDB"],
+      url: "https://github.com",
+      image_url: "https://picsum.photos/seed/task/600/340",
+      position: 2,
+    },
+    {
+      id: 3,
+      title: "AI Chat Interface",
+      description: "Conversational AI interface with streaming responses, conversation history, and markdown rendering.",
+      tech_stack: ["Next.js", "TypeScript", "OpenAI API", "Tailwind"],
+      url: "https://github.com",
+      image_url: "https://picsum.photos/seed/aichat/600/340",
+      position: 3,
+    },
+    {
+      id: 4,
+      title: "DevOps Dashboard",
+      description: "Infrastructure monitoring dashboard with live metrics, alerting, and deployment pipeline visualization.",
+      tech_stack: ["React", "Grafana", "Prometheus", "Docker"],
+      url: "https://github.com",
+      image_url: "https://picsum.photos/seed/devops/600/340",
+      position: 4,
+    },
+  ],
+
+  experience: [
+    {
+      id: 1,
+      company: "TechCorp Thailand",
+      role: "Senior Frontend Developer",
+      start_date: "2023-01",
+      end_date: null,
+      description: "Leading frontend architecture for enterprise SaaS products. Migrated legacy codebase to Next.js, reducing page load time by 60%. Mentored junior developers and established code review processes.",
+      position: 1,
+    },
+    {
+      id: 2,
+      company: "StartupX",
+      role: "Full Stack Developer",
+      start_date: "2021-06",
+      end_date: "2022-12",
+      description: "Built and shipped three customer-facing products from scratch. Designed RESTful APIs with Express and PostgreSQL. Implemented CI/CD pipelines with GitHub Actions.",
+      position: 2,
+    },
+    {
+      id: 3,
+      company: "Digital Agency Co.",
+      role: "Junior Web Developer",
+      start_date: "2020-01",
+      end_date: "2021-05",
+      description: "Developed responsive websites for clients across retail and hospitality sectors. Worked closely with designers to implement pixel-perfect UIs.",
+      position: 3,
+    },
+  ],
+
+  skills: [
+    { id: 1, name: "React", category: "Frontend", position: 1 },
+    { id: 2, name: "Next.js", category: "Frontend", position: 2 },
+    { id: 3, name: "TypeScript", category: "Frontend", position: 3 },
+    { id: 4, name: "Tailwind CSS", category: "Frontend", position: 4 },
+    { id: 5, name: "Framer Motion", category: "Frontend", position: 5 },
+    { id: 6, name: "Node.js", category: "Backend", position: 1 },
+    { id: 7, name: "Express.js", category: "Backend", position: 2 },
+    { id: 8, name: "PostgreSQL", category: "Backend", position: 3 },
+    { id: 9, name: "REST API", category: "Backend", position: 4 },
+    { id: 10, name: "Docker", category: "DevOps", position: 1 },
+    { id: 11, name: "GitHub Actions", category: "DevOps", position: 2 },
+    { id: 12, name: "Cloudflare", category: "DevOps", position: 3 },
+    { id: 13, name: "Figma", category: "Tools", position: 1 },
+    { id: 14, name: "Git", category: "Tools", position: 2 },
+    { id: 15, name: "VS Code", category: "Tools", position: 3 },
+  ],
+
+  education: [
+    {
+      id: 1,
+      school: "King Mongkut's University of Technology",
+      degree: "Bachelor of Science",
+      major: "Computer Science",
+      start_year: 2016,
+      end_year: 2020,
+      position: 1,
+    },
+    {
+      id: 2,
+      school: "Online Learning Platform",
+      degree: "Professional Certificate",
+      major: "Cloud Architecture",
+      start_year: 2022,
+      end_year: 2022,
+      position: 2,
+    },
+  ],
+
+  certificates: [
+    {
+      id: 1,
+      cert_name: "AWS Certified Developer – Associate",
+      cert_description: "Validates expertise in developing and maintaining AWS-based applications.",
+      issuer: "Amazon Web Services",
+      date_issued: "2023-08-15",
+      url: "https://aws.amazon.com/certification",
+      position: 1,
+    },
+    {
+      id: 2,
+      cert_name: "Meta Front-End Developer",
+      cert_description: "Professional certificate covering React, responsive design, and front-end tooling.",
+      issuer: "Meta / Coursera",
+      date_issued: "2023-03-01",
+      url: "https://coursera.org",
+      position: 2,
+    },
+    {
+      id: 3,
+      cert_name: "Google UX Design Certificate",
+      cert_description: "Comprehensive UX design program covering research, wireframing, and prototyping.",
+      issuer: "Google / Coursera",
+      date_issued: "2022-11-10",
+      url: "https://coursera.org",
+      position: 3,
+    },
+  ],
+
+  contact: [
+    { platform: "GitHub", url: "https://github.com" },
+    { platform: "LinkedIn", url: "https://linkedin.com" },
+    { platform: "Email", url: "mailto:hello@example.com" },
+    { platform: "Twitter", url: "https://twitter.com" },
+  ],
+}
