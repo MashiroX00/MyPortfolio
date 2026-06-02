@@ -10,6 +10,7 @@ import type {
 } from "./types"
 
 const BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000"
+const MONITOR_BASE = process.env.NEXT_PUBLIC_MONITOR_URL ?? "http://localhost:4001"
 
 function authHeader(): Record<string, string> {
   const token = typeof window !== "undefined" ? localStorage.getItem("admin_token") : null
@@ -40,7 +41,11 @@ export const getSkills = () => apiFetch<Skill[]>("GET", "/skills")
 export const getEducation = () => apiFetch<Education[]>("GET", "/education")
 export const getCertificates = () => apiFetch<Certificate[]>("GET", "/certificates")
 export const getContact = () => apiFetch<ContactLink[]>("GET", "/contact")
-export const getServerStatus = () => apiFetch<ServerStatus>("GET", "/server-status")
+export async function getServerStatus(): Promise<ServerStatus> {
+  const res = await fetch(`${MONITOR_BASE}/api/server-status`)
+  if (!res.ok) throw new Error("Monitor offline")
+  return res.json() as Promise<ServerStatus>
+}
 
 // About (singleton)
 export const updateAbout = (data: AboutData) => apiFetch<AboutData>("PUT", "/about", data, true)

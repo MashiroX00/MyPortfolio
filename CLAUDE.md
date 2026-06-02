@@ -67,6 +67,10 @@ Active Section is tracked via Intersection Observer; its Sidebar Link highlights
 
 Base URL from `NEXT_PUBLIC_API_URL` env var. All fetch calls include `Authorization: Bearer <token>` when authenticated. On fetch failure: display error message — do **not** cache or silently swallow errors.
 
+### Monitor API
+
+Separate local service. Base URL from `NEXT_PUBLIC_MONITOR_URL` env var (default `http://localhost:4001`). Used only by `getServerStatus()` in `lib/api.ts`. Exposes `GET /api/server-status`. Runs locally and is exposed via Cloudflare Tunnel — independent of the main backend. If unreachable, `ServerStatus` section shows OFFLINE.
+
 ### Sections (display order)
 
 About · Projects · Experience · Skills · Education · Certificate · Contact · Server
